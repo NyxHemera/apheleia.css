@@ -1,0 +1,112 @@
+.btn {
+  padding: 1px 10px 1px 10px;
+  color: #fafafa;
+  border-width: 2px;
+  border-style: outset;
+  border-color: #aaa;
+  border-radius: 5px;
+  outline: none;
+}
+.btn:not(.btn-ind) {
+  background-color: #aaa;
+}
+.btn:not(.disabled):not(.btn-ind):hover {
+  background-color: #919191;
+}
+.btn:not(.disabled):not(.btn-ind):active {
+  color: #aaa;
+  background-color: #fafafa;
+}
+.btn-flat {
+  border-style: solid;
+}
+.btn-create {
+  border-color: #38a05c;
+}
+.btn-create:not(.btn-ind) {
+  background-color: #4bc074;
+}
+.btn-create:not(.disabled):not(.btn-ind):hover {
+  background-color: #38a05c;
+}
+.btn-create:not(.disabled):not(.btn-ind):active {
+  color: #4bc074;
+  background-color: #fafafa;
+}
+.btn-submit {
+  border-color: #376c94;
+}
+.btn-submit:not(.btn-ind) {
+  background-color: #4587b9;
+}
+.btn-submit:not(.disabled):not(.btn-ind):hover {
+  background-color: #376c94;
+}
+.btn-submit:not(.disabled):not(.btn-ind):active {
+  color: #4587b9;
+  background-color: #fafafa;
+}
+.btn-destroy {
+  border-color: #8e3b33;
+}
+.btn-destroy:not(.btn-ind) {
+  background-color: #b34a41;
+}
+.btn-destroy:not(.disabled):not(.btn-ind):hover {
+  background-color: #8e3b33;
+}
+.btn-destroy:not(.disabled):not(.btn-ind):active {
+  color: #b34a41;
+  background-color: #fafafa;
+}
+.btn-warn {
+  border-color: #d0bb45;
+}
+.btn-warn:not(.btn-ind) {
+  background-color: #daca6e;
+}
+.btn-warn:not(.disabled):not(.btn-ind):hover {
+  background-color: #d0bb45;
+}
+.btn-warn:not(.disabled):not(.btn-ind):active {
+  color: #daca6e;
+  background-color: #fafafa;
+}
+.btn-ind {
+  color: #2a2a2a;
+  background-color: transparent;
+}
+btn-group > * {
+  float: left;
+  margin: 0;
+}
+btn-group > .btn:not(:first-child):not(:last-child) {
+  border-right-style: none;
+  border-left-style: none;
+  border-radius: 0;
+}
+btn-group > .btn:first-child {
+  border-right-style: none;
+  border-radius: 5px 0 0 5px;
+}
+btn-group > .btn:last-child {
+  border-left-style: none;
+  border-radius: 0 5px 5px 0;
+}
+.btn-group > * {
+  float: left;
+  margin: 0;
+}
+.btn-group > .btn:not(:first-child):not(:last-child) {
+  border-right-style: none;
+  border-left-style: none;
+  border-radius: 0;
+}
+.btn-group > .btn:first-child {
+  border-right-style: none;
+  border-radius: 5px 0 0 5px;
+}
+.btn-group > .btn:last-child {
+  border-left-style: none;
+  border-radius: 0 5px 5px 0;
+}

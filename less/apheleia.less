@@ -1,0 +1,134 @@
+@create: #4bc074;
+@submit: #4587b9;
+@destroy: #b34a41;
+@warn: #daca6e;
+@lightgrey: #aaa;
+@charcoal: #2a2a2a;
+@parchment: #fafafa;
+// Button CSS Below!
+.btn {
+    padding: 1px 10px 1px 10px;
+    color: @parchment;
+    border-width: 2px;
+    border-style: outset;
+    border-color: @lightgrey;
+    border-radius: 5px;
+    outline: none;
+    &:not(.btn-ind) {
+        background-color: @lightgrey;
+    }
+    &:not(.disabled):not(.btn-ind):hover {
+        background-color: darken(@lightgrey, 10%);
+    }
+    &:not(.disabled):not(.btn-ind):active {
+        color: @lightgrey;
+        background-color: @parchment;
+    }
+}
+
+.btn-flat {
+    border-style: solid;
+}
+
+.btn-create {
+    border-color: darken(@create, 10%);
+    &:not(.btn-ind) {
+        background-color: @create;
+    }
+    &:not(.disabled):not(.btn-ind):hover {
+        background-color: darken(@create, 10%);
+    }
+    &:not(.disabled):not(.btn-ind):active {
+        color: @create;
+        background-color: @parchment;
+    }
+}
+
+.btn-submit {
+    border-color: darken(@submit, 10%);
+    &:not(.btn-ind) {
+        background-color: @submit;
+    }
+    &:not(.disabled):not(.btn-ind):hover {
+        background-color: darken(@submit, 10%);
+    }
+    &:not(.disabled):not(.btn-ind):active {
+        color: @submit;
+        background-color: @parchment;
+    }
+}
+
+.btn-destroy {
+    border-color: darken(@destroy, 10%);
+    &:not(.btn-ind) {
+        background-color: @destroy;
+    }
+    &:not(.disabled):not(.btn-ind):hover {
+        background-color: darken(@destroy, 10%);
+    }
+    &:not(.disabled):not(.btn-ind):active {
+        color: @destroy;
+        background-color: @parchment;
+    }
+}
+
+.btn-warn {
+    border-color: darken(@warn, 10%);
+    &:not(.btn-ind) {
+        background-color: @warn;
+    }
+    &:not(.disabled):not(.btn-ind):hover {
+        background-color: darken(@warn, 10%);
+    }
+    &:not(.disabled):not(.btn-ind):active {
+        color: @warn;
+        background-color: @parchment;
+    }
+}
+
+// Indicators, meant to contain dynamic text that changes based on button presses from surrounding btn's. These really only make sense within btn-groups.
+.btn-ind {
+    color: @charcoal;
+    background-color: transparent;
+}
+
+// These are groups of btn elements listed side by side with no spacing. Borders connect on the tops and bottoms and the only curves are on the outermost corners of the group.
+btn-group {
+    > * {
+        float: left;
+        margin: 0;
+    }
+    > .btn:not(:first-child):not(:last-child) {
+        border-right-style: none;
+        border-left-style: none;
+        border-radius: 0;
+    }
+    > .btn:first-child {
+        border-right-style: none;
+        border-radius: 5px 0 0 5px;
+    }
+    > .btn:last-child {
+        border-left-style: none;
+        border-radius: 0 5px 5px 0;
+    }
+}
+
+.btn-group {
+    > * {
+        float: left;
+        margin: 0;
+    }
+    > .btn:not(:first-child):not(:last-child) {
+        border-right-style: none;
+        border-left-style: none;
+        border-radius: 0;
+    }
+    > .btn:first-child {
+        border-right-style: none;
+        border-radius: 5px 0 0 5px;
+    }
+    > .btn:last-child {
+        border-left-style: none;
+        border-radius: 0 5px 5px 0;
+    }
+}
