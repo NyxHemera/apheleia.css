@@ -5,130 +5,201 @@
 @lightgrey: #aaa;
 @charcoal: #2a2a2a;
 @parchment: #fafafa;
-// Button CSS Below!
-.btn {
-    padding: 1px 10px 1px 10px;
-    color: @parchment;
-    border-width: 2px;
-    border-style: outset;
-    border-color: @lightgrey;
-    border-radius: 5px;
-    outline: none;
-    &:not(.btn-ind) {
-        background-color: @lightgrey;
-    }
-    &:not(.disabled):not(.btn-ind):hover {
-        background-color: darken(@lightgrey, 10%);
-    }
-    &:not(.disabled):not(.btn-ind):active {
-        color: @lightgrey;
-        background-color: @parchment;
-    }
+* {
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
 }
 
-.btn-flat {
-    border-style: solid;
+.break {
+	margin-top: 20px;
+}
+
+// Button CSS Below!
+.btn {
+	padding: 1px 10px 1px 10px;
+	color: @parchment;
+	border-width: 1px;
+	border-style: solid;
+	border-color: @lightgrey;
+	border-radius: 5px;
+	outline: none;
+	&:not(.btn-ind) {
+		background-color: @lightgrey;
+	}
+	&:not(.disabled):not(.btn-ind):hover {
+		background-color: darken(@lightgrey, 10%);
+	}
+	&:not(.disabled):not(.btn-ind):active {
+		color: @parchment;
+		background-color: darken(@lightgrey, 15%);
+	}
+}
+
+.btn-clear {
+	padding: 1px 10px 1px 10px;
+	color: @lightgrey;
+	border-width: 1px;
+	border-style: solid;
+	border-color: @lightgrey;
+	border-radius: 5px;
+	outline: none;
+	&:not(.btn-ind) {
+		background-color: transparent;
+	}
+	&:not(.disabled):not(.btn-ind):hover {
+		color: @parchment;
+		background-color: darken(@lightgrey, 10%);
+	}
+	&:not(.disabled):not(.btn-ind):active {
+		color: @parchment;
+		background-color: darken(@lightgrey, 15%);
+	}
 }
 
 .btn-create {
-    border-color: darken(@create, 10%);
-    &:not(.btn-ind) {
-        background-color: @create;
-    }
-    &:not(.disabled):not(.btn-ind):hover {
-        background-color: darken(@create, 10%);
-    }
-    &:not(.disabled):not(.btn-ind):active {
-        color: @create;
-        background-color: @parchment;
-    }
+	border-color: @create;
+	&.btn-clear {
+		color: @create;
+	}
+	&:not(.btn-ind):not(.btn-clear) {
+		background-color: @create;
+	}
+	&:not(.disabled):not(.btn-ind):hover {
+		color: @parchment;
+		background-color: darken(@create, 10%);
+	}
+	&:not(.disabled):not(.btn-ind):active {
+		color: @parchment;
+		background-color: darken(@create, 15%);
+	}
 }
 
 .btn-submit {
-    border-color: darken(@submit, 10%);
-    &:not(.btn-ind) {
-        background-color: @submit;
-    }
-    &:not(.disabled):not(.btn-ind):hover {
-        background-color: darken(@submit, 10%);
-    }
-    &:not(.disabled):not(.btn-ind):active {
-        color: @submit;
-        background-color: @parchment;
-    }
+	border-color: @submit;
+	&.btn-clear {
+		color: @submit;
+	}
+	&:not(.btn-ind):not(.btn-clear) {
+		background-color: @submit;
+	}
+	&:not(.disabled):not(.btn-ind):hover {
+		color: @parchment;
+		background-color: darken(@submit, 10%);
+	}
+	&:not(.disabled):not(.btn-ind):active {
+		color: @parchment;
+		background-color: darken(@submit, 15%);
+	}
 }
 
 .btn-destroy {
-    border-color: darken(@destroy, 10%);
-    &:not(.btn-ind) {
-        background-color: @destroy;
-    }
-    &:not(.disabled):not(.btn-ind):hover {
-        background-color: darken(@destroy, 10%);
-    }
-    &:not(.disabled):not(.btn-ind):active {
-        color: @destroy;
-        background-color: @parchment;
-    }
+	border-color: @destroy;
+	&.btn-clear {
+		color: @destroy;
+	}
+	&:not(.btn-ind):not(.btn-clear) {
+		background-color: @destroy;
+	}
+	&:not(.disabled):not(.btn-ind):hover {
+		color: @parchment;
+		background-color: darken(@destroy, 10%);
+	}
+	&:not(.disabled):not(.btn-ind):active {
+		color: @parchment;
+		background-color: darken(@destroy, 15%);
+	}
 }
 
 .btn-warn {
-    border-color: darken(@warn, 10%);
-    &:not(.btn-ind) {
-        background-color: @warn;
-    }
-    &:not(.disabled):not(.btn-ind):hover {
-        background-color: darken(@warn, 10%);
-    }
-    &:not(.disabled):not(.btn-ind):active {
-        color: @warn;
-        background-color: @parchment;
-    }
+	border-color: @warn;
+	&.btn-clear {
+		color: @warn;
+	}
+	&:not(.btn-ind):not(.btn-clear) {
+		background-color: @warn;
+	}
+	&:not(.disabled):not(.btn-ind):hover {
+		color: @parchment;
+		background-color: darken(@warn, 10%);
+	}
+	&:not(.disabled):not(.btn-ind):active {
+		color: @parchment;
+		background-color: darken(@warn, 15%);
+	}
 }
 
 // Indicators, meant to contain dynamic text that changes based on button presses from surrounding btn's. These really only make sense within btn-groups.
 .btn-ind {
-    color: @charcoal;
-    background-color: transparent;
+	color: @charcoal;
+	background-color: transparent;
 }
 
 // These are groups of btn elements listed side by side with no spacing. Borders connect on the tops and bottoms and the only curves are on the outermost corners of the group.
 btn-group {
-    > * {
-        float: left;
-        margin: 0;
-    }
-    > .btn:not(:first-child):not(:last-child) {
-        border-right-style: none;
-        border-left-style: none;
-        border-radius: 0;
-    }
-    > .btn:first-child {
-        border-right-style: none;
-        border-radius: 5px 0 0 5px;
-    }
-    > .btn:last-child {
-        border-left-style: none;
-        border-radius: 0 5px 5px 0;
-    }
+	font-size: 0;
+	> * {
+		margin: 0;
+	}
+	> .btn:not(:first-child):not(:last-child) {
+		border-right-style: none;
+		border-left-style: none;
+		border-radius: 0;
+	}
+	> .btn:first-child {
+		border-right-style: none;
+		border-radius: 5px 0 0 5px;
+	}
+	> .btn:last-child {
+		border-left-style: none;
+		border-radius: 0 5px 5px 0;
+	}
+	> .btn-clear:not(:first-child):not(:last-child) {
+		border-right-style: none;
+		border-left-style: none;
+		border-radius: 0;
+	}
+	> .btn-clear:first-child {
+		border-right-style: none;
+		border-radius: 5px 0 0 5px;
+	}
+	> .btn-clear:last-child {
+		border-left-style: none;
+		border-radius: 0 5px 5px 0;
+	}
 }
 
 .btn-group {
-    > * {
-        float: left;
-        margin: 0;
-    }
-    > .btn:not(:first-child):not(:last-child) {
-        border-right-style: none;
-        border-left-style: none;
-        border-radius: 0;
-    }
-    > .btn:first-child {
-        border-right-style: none;
-        border-radius: 5px 0 0 5px;
-    }
-    > .btn:last-child {
-        border-left-style: none;
-        border-radius: 0 5px 5px 0;
-    }
+	font-size: 0;
+	> * {
+		margin: 0;
+	}
+	> .btn:not(:first-child):not(:last-child) {
+		border-right-style: none;
+		border-left-style: none;
+		border-radius: 0;
+	}
+	> .btn:first-child {
+		border-right-style: none;
+		border-radius: 5px 0 0 5px;
+	}
+	> .btn:last-child {
+		border-left-style: none;
+		border-radius: 0 5px 5px 0;
+	}
+	> .btn-clear:not(:first-child):not(:last-child) {
+		border-right-style: none;
+		border-left-style: none;
+		border-radius: 0;
+	}
+	> .btn-clear:first-child {
+		border-right-style: none;
+		border-radius: 5px 0 0 5px;
+	}
+	> .btn-clear:last-child {
+		border-left-style: none;
+		border-radius: 0 5px 5px 0;
+	}
+}
+
+.shadows {
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, .75);
 }

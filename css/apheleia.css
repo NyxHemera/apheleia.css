@@ -1,8 +1,14 @@
+* {
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+}
+.break {
+  margin-top: 20px;
+}
 .btn {
   padding: 1px 10px 1px 10px;
   color: #fafafa;
-  border-width: 2px;
-  border-style: outset;
+  border-width: 1px;
+  border-style: solid;
   border-color: #aaa;
   border-radius: 5px;
   outline: none;
@@ -14,70 +20,105 @@
   background-color: #919191;
 }
 .btn:not(.disabled):not(.btn-ind):active {
-  color: #aaa;
-  background-color: #fafafa;
+  color: #fafafa;
+  background-color: #848484;
 }
-.btn-flat {
+.btn-clear {
+  padding: 1px 10px 1px 10px;
+  color: #aaa;
+  border-width: 1px;
   border-style: solid;
+  border-color: #aaa;
+  border-radius: 5px;
+  outline: none;
+}
+.btn-clear:not(.btn-ind) {
+  background-color: transparent;
+}
+.btn-clear:not(.disabled):not(.btn-ind):hover {
+  color: #fafafa;
+  background-color: #919191;
+}
+.btn-clear:not(.disabled):not(.btn-ind):active {
+  color: #fafafa;
+  background-color: #848484;
 }
 .btn-create {
-  border-color: #38a05c;
+  border-color: #4bc074;
 }
-.btn-create:not(.btn-ind) {
+.btn-create.btn-clear {
+  color: #4bc074;
+}
+.btn-create:not(.btn-ind):not(.btn-clear) {
   background-color: #4bc074;
 }
 .btn-create:not(.disabled):not(.btn-ind):hover {
+  color: #fafafa;
   background-color: #38a05c;
 }
 .btn-create:not(.disabled):not(.btn-ind):active {
-  color: #4bc074;
-  background-color: #fafafa;
+  color: #fafafa;
+  background-color: #318d52;
 }
 .btn-submit {
-  border-color: #376c94;
+  border-color: #4587b9;
 }
-.btn-submit:not(.btn-ind) {
+.btn-submit.btn-clear {
+  color: #4587b9;
+}
+.btn-submit:not(.btn-ind):not(.btn-clear) {
   background-color: #4587b9;
 }
 .btn-submit:not(.disabled):not(.btn-ind):hover {
+  color: #fafafa;
   background-color: #376c94;
 }
 .btn-submit:not(.disabled):not(.btn-ind):active {
-  color: #4587b9;
-  background-color: #fafafa;
+  color: #fafafa;
+  background-color: #305e81;
 }
 .btn-destroy {
-  border-color: #8e3b33;
+  border-color: #b34a41;
 }
-.btn-destroy:not(.btn-ind) {
+.btn-destroy.btn-clear {
+  color: #b34a41;
+}
+.btn-destroy:not(.btn-ind):not(.btn-clear) {
   background-color: #b34a41;
 }
 .btn-destroy:not(.disabled):not(.btn-ind):hover {
+  color: #fafafa;
   background-color: #8e3b33;
 }
 .btn-destroy:not(.disabled):not(.btn-ind):active {
-  color: #b34a41;
-  background-color: #fafafa;
+  color: #fafafa;
+  background-color: #7b332d;
 }
 .btn-warn {
-  border-color: #d0bb45;
+  border-color: #daca6e;
 }
-.btn-warn:not(.btn-ind) {
+.btn-warn.btn-clear {
+  color: #daca6e;
+}
+.btn-warn:not(.btn-ind):not(.btn-clear) {
   background-color: #daca6e;
 }
 .btn-warn:not(.disabled):not(.btn-ind):hover {
+  color: #fafafa;
   background-color: #d0bb45;
 }
 .btn-warn:not(.disabled):not(.btn-ind):active {
-  color: #daca6e;
-  background-color: #fafafa;
+  color: #fafafa;
+  background-color: #c8b233;
 }
 .btn-ind {
   color: #2a2a2a;
   background-color: transparent;
 }
+btn-group {
+  font-size: 0;
+}
 btn-group > * {
-  float: left;
   margin: 0;
 }
 btn-group > .btn:not(:first-child):not(:last-child) {
@@ -93,8 +134,23 @@ btn-group > .btn:last-child {
   border-left-style: none;
   border-radius: 0 5px 5px 0;
 }
+btn-group > .btn-clear:not(:first-child):not(:last-child) {
+  border-right-style: none;
+  border-left-style: none;
+  border-radius: 0;
+}
+btn-group > .btn-clear:first-child {
+  border-right-style: none;
+  border-radius: 5px 0 0 5px;
+}
+btn-group > .btn-clear:last-child {
+  border-left-style: none;
+  border-radius: 0 5px 5px 0;
+}
+.btn-group {
+  font-size: 0;
+}
 .btn-group > * {
-  float: left;
   margin: 0;
 }
 .btn-group > .btn:not(:first-child):not(:last-child) {
@@ -109,4 +165,20 @@ btn-group > .btn:last-child {
 .btn-group > .btn:last-child {
   border-left-style: none;
   border-radius: 0 5px 5px 0;
+}
+.btn-group > .btn-clear:not(:first-child):not(:last-child) {
+  border-right-style: none;
+  border-left-style: none;
+  border-radius: 0;
+}
+.btn-group > .btn-clear:first-child {
+  border-right-style: none;
+  border-radius: 5px 0 0 5px;
+}
+.btn-group > .btn-clear:last-child {
+  border-left-style: none;
+  border-radius: 0 5px 5px 0;
+}
+.shadows {
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.75);
 }
