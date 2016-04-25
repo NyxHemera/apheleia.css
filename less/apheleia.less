@@ -22,6 +22,7 @@
 	border-color: @lightgrey;
 	border-radius: 5px;
 	outline: none;
+	transition: background-color ease 250ms, color ease 250ms;
 	&:not(.btn-ind) {
 		background-color: @lightgrey;
 	}
@@ -31,6 +32,10 @@
 	&:not(.disabled):not(.btn-ind):active {
 		color: @parchment;
 		background-color: darken(@lightgrey, 15%);
+	}
+	a {
+		text-decoration: none;
+		color: inherit;
 	}
 }
 
@@ -42,6 +47,7 @@
 	border-color: @lightgrey;
 	border-radius: 5px;
 	outline: none;
+	transition: background-color ease 250ms, color ease 250ms;
 	&:not(.btn-ind) {
 		background-color: transparent;
 	}
@@ -52,6 +58,10 @@
 	&:not(.disabled):not(.btn-ind):active {
 		color: @parchment;
 		background-color: darken(@lightgrey, 15%);
+	}
+	a {
+		text-decoration: none;
+		color: inherit;
 	}
 }
 
@@ -198,6 +208,76 @@ btn-group {
 		border-left-style: none;
 		border-radius: 0 5px 5px 0;
 	}
+}
+
+.dropdown {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	a {
+		text-decoration: none;
+		color: black;
+	}
+	li ul {
+		opacity: 0;
+		visibility: hidden;
+		transition: ease 200ms;
+	}
+	> li a:hover + ul {
+		opacity: 1;
+		visibility: visible;
+	}
+	> li ul:hover {
+		opacity: 1;
+		visibility: visible;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+}
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black;
+	&:hover .tooltiptext {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.tooltiptext {
+	white-space: nowrap;
+	visibility: hidden;
+	opacity: 0;
+	background-color: rgba(0, 0, 0, 0.75);
+	color: white;
+	margin: 0;
+	padding: 3px;
+	border-radius: 3px;
+
+	position: absolute;
+	z-index: 1;
+	transition: ease 500ms;
+	> li {
+		display: inline-block;
+	}
+}
+
+.tt-right {
+	left: 105%;
+	top: -3px;
+}
+
+.tt-left {
+	right: 105%;
+	top: -3px;
+}
+
+.tt-top {
+	left: -3px;
+	bottom: 105%;
 }
 
 .shadows {
