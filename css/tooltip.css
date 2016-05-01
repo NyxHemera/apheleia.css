@@ -1,0 +1,37 @@
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.tooltiptext {
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  margin: 0;
+  padding: 3px;
+  border-radius: 3px;
+  position: absolute;
+  z-index: 1;
+  transition: ease 500ms;
+}
+.tooltiptext > li {
+  display: inline-block;
+}
+.tt-right {
+  left: 105%;
+  top: -3px;
+}
+.tt-left {
+  right: 105%;
+  top: -3px;
+}
+.tt-top {
+  left: -3px;
+  bottom: 105%;
+}

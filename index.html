@@ -2,7 +2,13 @@
 <html>
 <head>
 	<title>Apheleia</title>
-	<link rel="stylesheet" type="text/css" href="less/apheleia.css">
+	<link rel="stylesheet" type="text/css" href="css/apheleia.css">
+	<link rel="stylesheet" type="text/css" href="css/btn.css">
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+	<link rel="stylesheet" type="text/css" href="css/tooltip.css">
+	<link rel="stylesheet" type="text/css" href="css/effects.css">
+	<link rel="stylesheet" type="text/css" href="css/ani.css">
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
 </head>
 <body>
 
@@ -93,55 +99,14 @@
 
 	<div class="break"></div>
 
-	<form class="form-flex" role="form" id="new_user" action="/users" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="UybU4Lv7wWbIGzzX+UvaSDwZmVJsMDNyAMLt71CitZRvA4Ug/WQGpZkBm6GxsnP4gUbHCGkOupcZBW3mAaT2Rw==" />
-
-		<div class="">
+	<form class="form-flex">
 	    <label class="" for="user_login_id">Login</label>
-	    <div class="">
-	      <input class="inp-text" type="text" name="user[login_id]" id="user_login_id" />
-	    </div>
-	  </div>
-		<div class="">
+	    <input class="inp-text" type="text" name="user[login_id]" id="user_login_id" />
 			<label class="" for="user_first_name">First name</label>
-			<div class="">
-				<input class="inp-text inp-text-create" type="text" name="user[first_name]" id="user_first_name" />
-			</div>
-		</div>
-		<div class="">
+			<input class="inp-text inp-text-create" type="text" name="user[first_name]"/>
 			<label class="" for="user_last_name">Last name</label>
-			<div class="">
-				<input class="" type="text" name="user[last_name]" id="user_last_name" />
-			</div>
-		</div>
-		<div class="">
-			<label class="" for="user_email">Email</label>
-			<div class="">
-				<input class="" type="text" name="user[email]" id="user_email" />
-			</div>
-		</div>
-		<div class="">
-			<label class="" for="user_photo_url">Photo url</label>
-			<div class="">
-				<input class="" type="text" name="user[photo_url]" id="user_photo_url" />
-			</div>
-		</div>
-		<div class="">
-			<label class="" for="user_password">Password</label>
-			<div class="">
-				<input class="" type="password" name="user[password]" id="user_password" />
-			</div>
-		</div>
-		<div class="">
-			<label class="" for="user_password_confirmation">Password confirmation</label>
-			<div class="">
-				<input class="" type="password" name="user[password_confirmation]" id="user_password_confirmation" />
-			</div>
-		</div>
-		<div class="">
-			<div class="">
-				<input type="submit" name="commit" value="Create User" class="" />
-			</div>
-		</div>
+			<input class="" type="text" name="user[last_name]" id="user_last_name" />
+			<input type="submit" name="commit" value="Create User" class="" />
 	</form>
 
 </body>
