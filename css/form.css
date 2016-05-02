@@ -9,23 +9,23 @@
 .inp-text {
   padding: 5px;
   border-radius: 3px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #aaa;
-  width: 100%;
+  border: solid 1px #aaa;
   outline: none;
 }
 .inp-text:not(.disabled):hover {
   border-color: #919191;
-  border-width: 1px;
 }
 .inp-text:not(.disabled):active {
   border-color: #848484;
-  border-width: 1px;
 }
 .inp-text:not(.disabled):focus {
   border-color: #848484;
-  border-width: 1px;
+}
+.inp-text-create {
+  padding: 5px;
+  border-radius: 3px;
+  border: solid 1px #aaa;
+  outline: none;
 }
 .inp-text-create:not(.disabled):hover {
   border-color: #38a05c;
@@ -36,6 +36,12 @@
 .inp-text-create:not(.disabled):focus {
   border-color: #318d52;
 }
+.inp-text-submit {
+  padding: 5px;
+  border-radius: 3px;
+  border: solid 1px #aaa;
+  outline: none;
+}
 .inp-text-submit:not(.disabled):hover {
   border-color: #376c94;
 }
@@ -45,6 +51,12 @@
 .inp-text-submit:not(.disabled):focus {
   border-color: #305e81;
 }
+.inp-text-destroy {
+  padding: 5px;
+  border-radius: 3px;
+  border: solid 1px #aaa;
+  outline: none;
+}
 .inp-text-destroy:not(.disabled):hover {
   border-color: #8e3b33;
 }
@@ -53,6 +65,12 @@
 }
 .inp-text-destroy:not(.disabled):focus {
   border-color: #7b332d;
+}
+.inp-text-warn {
+  padding: 5px;
+  border-radius: 3px;
+  border: solid 1px #aaa;
+  outline: none;
 }
 .inp-text-warn:not(.disabled):hover {
   border-color: #d0bb45;
