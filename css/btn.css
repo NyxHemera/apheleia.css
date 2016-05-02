@@ -1,12 +1,50 @@
-.btn {
+.btn-turq {
   padding: 1px 10px 1px 10px;
-  color: #fafafa;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #aaa;
+  color: #FFFFFF;
+  border: 1px solid #00D8E3;
   border-radius: 5px;
   outline: none;
   transition: background-color ease 250ms, color ease 250ms;
+  text-decoration: none;
+}
+.btn-turq:not(.btn-ind) {
+  background-color: #00D8E3;
+}
+.btn-turq:not(.disabled):not(.btn-ind):hover {
+  background-color: #00a7b0;
+}
+.btn-turq:not(.disabled):not(.btn-ind):active {
+  color: #FFFFFF;
+  background-color: #008f96;
+}
+.btn-green {
+  padding: 1px 10px 1px 10px;
+  color: #2CE770;
+  border: 1px solid #2CE770;
+  border-radius: 5px;
+  outline: none;
+  transition: background-color ease 250ms, color ease 250ms;
+  text-decoration: none;
+}
+.btn-green:not(.btn-ind) {
+  background-color: #FFFFFF;
+}
+.btn-green:not(.disabled):not(.btn-ind):hover {
+  color: #FFFFFF;
+  background-color: #17c958;
+}
+.btn-green:not(.disabled):not(.btn-ind):active {
+  color: #FFFFFF;
+  background-color: #14b24e;
+}
+.btn {
+  padding: 1px 10px 1px 10px;
+  color: #fafafa;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  outline: none;
+  transition: background-color ease 250ms, color ease 250ms;
+  text-decoration: none;
 }
 .btn:not(.btn-ind) {
   background-color: #aaa;
@@ -18,22 +56,17 @@
   color: #fafafa;
   background-color: #848484;
 }
-.btn a {
-  text-decoration: none;
-  color: inherit;
-}
 .btn-clear {
   padding: 1px 10px 1px 10px;
   color: #aaa;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #aaa;
+  border: 1px solid #aaa;
   border-radius: 5px;
   outline: none;
   transition: background-color ease 250ms, color ease 250ms;
+  text-decoration: none;
 }
 .btn-clear:not(.btn-ind) {
-  background-color: transparent;
+  background-color: #fafafa;
 }
 .btn-clear:not(.disabled):not(.btn-ind):hover {
   color: #fafafa;
@@ -42,10 +75,6 @@
 .btn-clear:not(.disabled):not(.btn-ind):active {
   color: #fafafa;
   background-color: #848484;
-}
-.btn-clear a {
-  text-decoration: none;
-  color: inherit;
 }
 .btn-create {
   border-color: #4bc074;
@@ -119,67 +148,23 @@
   color: #2a2a2a;
   background-color: transparent;
 }
-btn-group {
-  font-size: 0;
-}
-btn-group > * {
-  margin: 0;
-}
-btn-group > .btn:not(:first-child):not(:last-child) {
-  border-right-style: none;
-  border-left-style: none;
-  border-radius: 0;
-}
-btn-group > .btn:first-child {
-  border-right-style: none;
-  border-radius: 5px 0 0 5px;
-}
-btn-group > .btn:last-child {
-  border-left-style: none;
-  border-radius: 0 5px 5px 0;
-}
-btn-group > .btn-clear:not(:first-child):not(:last-child) {
-  border-right-style: none;
-  border-left-style: none;
-  border-radius: 0;
-}
-btn-group > .btn-clear:first-child {
-  border-right-style: none;
-  border-radius: 5px 0 0 5px;
-}
-btn-group > .btn-clear:last-child {
-  border-left-style: none;
-  border-radius: 0 5px 5px 0;
-}
 .btn-group {
   font-size: 0;
 }
 .btn-group > * {
   margin: 0;
+  font-size: initial;
 }
-.btn-group > .btn:not(:first-child):not(:last-child) {
+.btn-group > *:not(:first-child):not(:last-child) {
   border-right-style: none;
   border-left-style: none;
   border-radius: 0;
 }
-.btn-group > .btn:first-child {
+.btn-group > *:first-child {
   border-right-style: none;
   border-radius: 5px 0 0 5px;
 }
-.btn-group > .btn:last-child {
-  border-left-style: none;
-  border-radius: 0 5px 5px 0;
-}
-.btn-group > .btn-clear:not(:first-child):not(:last-child) {
-  border-right-style: none;
-  border-left-style: none;
-  border-radius: 0;
-}
-.btn-group > .btn-clear:first-child {
-  border-right-style: none;
-  border-radius: 5px 0 0 5px;
-}
-.btn-group > .btn-clear:last-child {
+.btn-group > *:last-child {
   border-left-style: none;
   border-radius: 0 5px 5px 0;
 }
